@@ -10,7 +10,7 @@ const Complaints = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/complaints');
+        const response = await axios.get('https://solarpay-06608393a7f1.herokuapp.com/api/complaints');
         setComplaints(response.data);
       } catch (error) {
         console.error("There was an error fetching the complaints!", error);
@@ -25,7 +25,7 @@ const Complaints = () => {
 
   const handleStatusChange = async (complaintId) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/complaints/${complaintId}`, { status: "closed" });
+      const response = await axios.put(`https://solarpay-06608393a7f1.herokuapp.com/${complaintId}`, { status: "closed" });
       console.log(response.data.message);
 
       // Update local state to reflect the change

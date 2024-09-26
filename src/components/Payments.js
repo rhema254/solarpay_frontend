@@ -5,7 +5,7 @@ const Payments = () => {
   const [payments, setPayments] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/payments')
+    axios.get('https://solarpay-06608393a7f1.herokuapp.com/api/payments')
       .then(response => {
         setPayments(response.data);
       })

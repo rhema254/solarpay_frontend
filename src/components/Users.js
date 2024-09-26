@@ -5,7 +5,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/users')
+    axios.get('https://solarpay-06608393a7f1.herokuapp.com/api/users')
       .then(response => {
         setUsers(response.data);
       })
